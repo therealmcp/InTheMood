@@ -1,4 +1,3 @@
-
 body {
     padding: 0;
     margin: 0;
@@ -8,56 +7,3 @@ body {
     color: #333;
     background: #efeee7;
   }
-  #box1 {
-    float: left;
-    width: 1020px;
-    background-color: rgb(20, 20, 77);
-    height: 50px;
-    color: white;
-    position: relative;
-    text-align: center;
-    margin-left: 200px;
-    padding-bottom: 20px;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-       
-  }
-  #box2 {
-    float: left;
-    width: 994px;
-    background-color:#ffffff;
-    color: #777777;
-    position: relative;
-    text-align: left;
-    margin-left: 200px;
-    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    margin-top: 10px;
-    margin-bottom:2px;color: grey;
-    border-color: #dddddd;
-    padding-left: 28px;
-    }
-  #box3 {
-    float: left;
-    width: 1000px;
-    background-color:#ffffff;
-    color: #777777;
-    padding: 1px; 
-    position: relative;
-    text-align: left;
-    margin-left: 200px;
-    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    border-color: #dddddd;
-    padding-left: 20px;
-    padding-bottom: 20px;
-  }
-  #box4{
-    float: left;
-    width: 1000px;
-    background-color:#ffffff;
-    color: #777777;
-    position: relative;
-    text-align: left;
-    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    margin-top: 40px;
-    margin-bottom:2px;color: grey;
-    border-color: #dddddd;
-    }
