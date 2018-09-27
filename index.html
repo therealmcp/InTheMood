@@ -9,21 +9,8 @@
    <body>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-      <script>
-         var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=seattle";
+      <script src= "assets/javascript/YelpApi.js"></script>
 
-         $.ajax({
-            url: myurl,
-            headers: {
-             'Authorization':'Bearer gdCapxGnUhlNcpxkkNXxQtkDAfCB8ZjcBDyQ0ZiiY5Ia9xqObyUDHnNgj9L8Kqlit6tBsPcA25nKBpEH9boKwgMwxCvl26f_ZZpVapfnD9B8MxGd5H6bG6OwsQypW3Yx',
-         },
-            method: 'GET',
-            dataType: 'json',
-            success: function(data){
-                console.log(data);
-            }
-         });      
-
-      </script>
+      
    </body>
 </html>
