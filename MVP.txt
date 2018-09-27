@@ -1,0 +1,10 @@
+
+Idea: Create an app wherein the user selects from a number of mood presets, and the app returns a restaurant idea.
+
+Target audience: Hungry people; indecisive couples
+
+Problem: Too many choices!  This app narrows down a crowded field for indecisive eaters-out.
+
+User stories:
+
+-As a user, I want to be able to select my mood and be given a local restaurant recommendation.

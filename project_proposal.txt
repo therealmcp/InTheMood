@@ -1,0 +1,31 @@
+Group D Project Proposal
+
+Project Title: "In the Mood"
+
+Team Members: Andrii, Mona, Colin, Derek
+
+Project Description:
+
+An app that takes in preset "mood" inputs (from a dropdown, for example) and gives restaurant, movie, event (other?) suggestions drawn from different APIs (Yelp, Google, Facebook, Fandango...).
+
+Sketch of final product:
+
+ - Dropdown menu gives users several mood options 
+ - App maps input categories to API search parameters
+ - App displays results in pleasing manner
+
+APIs to be used:
+
+ - Yelp
+ - Fandango
+ - Facebook
+ - Google Reviews
+
+Rough Breakdown of Tasks:
+
+ - Research APIs
+ - Create mood options, map to API queries
+ - Design UI
+
+
+ Google API key: AIzaSyAoNv28nOx4e9ECjuNyqsJljdaFhzCV26c
