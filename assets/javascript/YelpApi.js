@@ -1,4 +1,7 @@
-var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=seattle";
+
+
+
+var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Seattle";
 
 $.ajax({
     url: myurl,
@@ -10,4 +13,12 @@ $.ajax({
     success: function(data){
         console.log(data);
     }
- });      
+ }); 
+
+
+
+
+
+
+
+
