@@ -20,46 +20,54 @@
       <h1 class="display-3">In the Mood</h1>
       <p class="lead">What are you in the mood for tonight?</p>
   </div>
-</div>
-
-<br>
+  <br>
 
   <div class="container">
 
-      
+
     <div class="row">
-          <div class="col-3">
-            My location:
-            <input class="form-control" type="text" id="validationDefault05" placeholder="Zip" required>
-          </div>
-
-          <div class="col-3">
-            My mood:
-            <select class="form-control">
-              <option>Chill</option>
-              <option>Social</option>
-              <option>Adventurous</option>
-            </select>
-          </div>
-
-          <div class="col-3">
-            <br>
-              <input class="btn btn-light" type="submit" value="Submit" id="submit">
-          </div>
+      <div class="col-3">
+        My location:
+        <input class="form-control" type="text" placeholder="ZIP">
       </div>
-  
+
+      <div class="col-3">
+        My mood:
+        <select class="form-control">
+          <option>Cheery</option>
+          <option>Serious</option>
+          <option>Adventurous</option>
+        </select>
+      </div>
+
+      <div class="col-3">
+        <br>
+        <input id="find-restaurant" class="btn btn-light" type="submit" value="Submit">
+      </div>
     </div>
 
-    <div class="row" id="results">
+  </div>
 
-    </div>
+  <div class="row" id="results">
 
-  <body>
-      
-  
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-  </body>
+  </div>
+
+
+
+
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="assets\javascript\appGoogleReviews.js"></script>
+  <script src="assets/javascript/YelpApi.js"></script>
+</body>
+
 </html>
+
