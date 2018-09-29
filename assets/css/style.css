@@ -1,15 +1,18 @@
 body {
   background-color: purple;
   color: white;
-}
-
-.display-3 {
   font-family: 'Chicle', cursive;
 }
 
-.container {
-  position: absolute;
+.jumbotron {
+  background-color: purple;
+ 
+}
+
+
+/* .container {
+  position: relative;
   top: 25%;
   bottom: 75%;
-  left: 25%;
-}
+  left: 10%;
+} */
