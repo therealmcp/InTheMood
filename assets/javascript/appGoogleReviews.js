@@ -1,17 +1,47 @@
+var place
 
-var apiKey = "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8";
-var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.614502,-122.329566&radius=500&types=food&name=harbour&key=" + apiKey;
-var queryParams = {
-    "api-key": "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8"
-};
+$(document).ready(function() {
 
-var article = "";
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    
+    getLocation();
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function(response) {
+    console.log(place);
 
-    console.log(response);
+    function showPosition(position) {
+        position.coords.latitude + 
+        position.coords.longitude;
+        var location = position.coords.latitude + "," + position.coords.longitude;
+        place = location;
+        console.log(position);
+        }
 
-})
+    console.log("location will be " + place);
+
+    $("#find-restaurant").on("click", function(event) {
+
+    var apiKey = "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8";
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + place + "&radius=500&types=food&key=" + apiKey;
+    // var queryURL = "https://cors-anywhere.herokuapp.com/https://www.google.com/maps/search/json?api=1&q=90210"
+    var queryParams = {
+        "api-key": "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8"
+    };
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+
+        console.log(response);
+
+        })
+
+    })
+
+});
