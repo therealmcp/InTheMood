@@ -2,9 +2,6 @@ var place
 
 $(document).ready(function() {
 
-    // var x = document.getElementById("demo");
-
-
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -23,14 +20,11 @@ $(document).ready(function() {
         var location = position.coords.latitude + "," + position.coords.longitude;
         place = location;
         console.log(position);
-        // return location;
         }
 
-    // location = showPosition();
+    console.log("location will be " + place);
 
-    console.log("location will be " + location);
-
-    $("#submit").on("click", function(event) {
+    $("#find-restaurant").on("click", function(event) {
 
     var apiKey = "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8";
     var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + place + "&radius=500&types=food&key=" + apiKey;
