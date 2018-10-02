@@ -12,13 +12,20 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Chicle|Notable" rel="stylesheet">
+    <!--D3.js Library-->
+    <script src = "assets/javascript/d3.min.js"></script>
   </head>
 
+<body>
 
 <div class="container">
     <div class="jumbotron">
       <h1 class="display-3">In the Mood</h1>
       <p class="lead">What are you in the mood for tonight?</p>
+      <script>
+      d3.select(".lead").transition()
+        .style("font-size", "30px").delay(4000).duration(2000);
+      </script>
   </div>
   <br>
 
@@ -73,7 +80,7 @@
         </div>
 
   </div>
-
+  
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
