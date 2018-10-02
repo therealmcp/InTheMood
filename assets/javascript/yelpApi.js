@@ -1,31 +1,39 @@
 // Creating an AJAX call for the specific zipcode being clicked
 
-var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=98006";
+// var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=98006";
 
-$.ajax({
-    url: myurl,
-    headers: {
-        'Authorization': 'Bearer gdCapxGnUhlNcpxkkNXxQtkDAfCB8ZjcBDyQ0ZiiY5Ia9xqObyUDHnNgj9L8Kqlit6tBsPcA25nKBpEH9boKwgMwxCvl26f_ZZpVapfnD9B8MxGd5H6bG6OwsQypW3Yx',
-    },
-    method: 'GET',
-    dataType: 'json',
-    success: function (data) {
-        console.log({
-            data
-        });
-    }
+// $.ajax({
+//     url: myurl,
+//     headers: {
+//         'Authorization': 'Bearer gdCapxGnUhlNcpxkkNXxQtkDAfCB8ZjcBDyQ0ZiiY5Ia9xqObyUDHnNgj9L8Kqlit6tBsPcA25nKBpEH9boKwgMwxCvl26f_ZZpVapfnD9B8MxGd5H6bG6OwsQypW3Yx',
+//     },
+//     method: 'GET',
+//     dataType: 'json',
+//     success: function (data) {
+        
+//         console.log({
+//             data
+//         });
+//     }
    
-});
+// });
 
-
+var yelpRestaurants = [];
 
 $("#find-restaurant").on("click", function (event) {
-    event.preventDefault();
+    event.preventDefault(); 
+    //grab the input
+    console.log('finding restaurants')
+    var zipcode = $("#zip-input").val().trim();
+    displayRestaurantInfo();
+});
 
-    //Here we grab the input from the input box
-    var zipcode = $("#zipcode-input").val();
-    console.log(zipcode);
-    myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location="+zipcode;
+// displayMovieInfo function
+function displayRestaurantInfo() {
+    console.log('HITTING YELP API')
+    var restaurant = $(this).attr("data-name");
+    var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=98006";
+    // Creating an AJAX call
 
     $.ajax({
         url: myurl,
@@ -34,16 +42,16 @@ $("#find-restaurant").on("click", function (event) {
         },
         method: 'GET',
         dataType: 'json',
-        success: function (data) {
-            var businesses = data;
-            console.log({
-                data
-            });
-        }       
-    });
+    }).then(function(data) {
+            //var businesses = data;
+            for (var i = 0; i < data.businesses.length; i++) {
+                yelpRestaurants.push(data.businesses[i]);
+                console.log('yelpResult',yelpRestaurants); 
+            }
+        });
+}
 
-    // var zipPath = businesses.location.zip_code
-});
+
 
 
 
