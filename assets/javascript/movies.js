@@ -1,50 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Favorite Movies</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-</head>
-
-<body>
-  <div class="container">
-    <h1>Movie Search</h1>
-
-    <!-- We'll be dumping our JSON contents in here -->
-    <div id="movie-view"></div>
-
-    <!-- This form will be where users input data about the movies -->
-    <form id="movie-form">
-      <label for="movie-input">Search for a movie</label>
-      <input type="text" id="movie-input"><br>
-
-      <!-- This button will trigger our AJAX call -->
-      <input id="find-movie" type="submit" value="Movie Search">
-    </form>
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    
-    <div class="container">
-        <h2>Movie recomendations</h2>
-        <p>Based on your mood we selected a few movies for you</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Movie</th>
-              <th scope="col">Short description</th>
-              <th scope="col">Show times</th>
-              <th scope="col">Theatres</th>
-            </tr>
-          </thead>
-          <tbody>
-    
-          </tbody>
-        </table>
-      </div>
-
-<script>
            // construct the url with parameter values
            var apikey = "wcynn7m8cmtd5c24zfer2f77";
            var baseUrl = "http://data.tmsapi.com/v1.1";
@@ -54,9 +7,11 @@
            var today = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate();
 
 
-            $("#find-movie").on("click", function(event) {
+            $("#find-restaurant").on("click", function(event) {
             event.preventDefault();
-            var zipCode = $("#movie-input").val();
+            var zipCode = $("#zip-input").val();
+
+            // $("#hide-me").show();
 
              $.ajax({
               url: showtimesUrl,
@@ -108,11 +63,10 @@
                             console.log(locations);
                         })   
                         console.log(data);
-                        };
+                        $("#hide-me").show();
+        };
 
-    </script>
-
-  </div>
-</body>
-
-</html>
+        // Step 1. ConsoleLog Genre
+        // Step 2. Explore .val method
+        // Step 3. Check API calls
+        // Step 4. 
