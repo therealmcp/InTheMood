@@ -10,6 +10,13 @@ body {
 }
 
 
+#hide-me {
+
+display: none;
+
+}
+
+
 /* .container {
   position: relative;
   top: 25%;
