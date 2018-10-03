@@ -17,20 +17,36 @@
   </head>
 
 <body>
+<script>
+  d3.select("body")
+    .transition()
+    .duration(2000);
+    
+d3.select(".lead")
+    .transition()
+    .style("font-size", "30px")
+    .delay(4000)
+    .duration(2000);
+</script>
+    
 
 <div class="container">
     <div class="jumbotron">
       <h1 class="display-3">In the Mood</h1>
       <p class="lead">What are you in the mood for tonight?</p>
       <script>
-      d3.select(".lead").transition()
+      d3.select(".display-3").transition()
         .style("font-size", "30px").delay(4000).duration(2000);
+      
+      d3.select(".lead").transition()
+        .style("font-size", "40px").delay(4000).duration(2000)
+        .style("color", "red").delay(4000).duration(2000);
+      
       </script>
   </div>
   <br>
 
   <div class="container">
-
 
     <div class="row">
           <div class="col-3">
@@ -39,7 +55,7 @@
           </div>
 
           <div class="col-3">
-            My mood:
+            My mood:         
             <select name="dropdown" class="form-control" id="mood">
               <option value="cheap">Cheap</option>
               <option value="established">Established</option>

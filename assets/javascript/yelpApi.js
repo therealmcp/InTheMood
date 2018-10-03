@@ -51,10 +51,8 @@ function displayRestaurantInfo() {
         });
 }
 
-d3.select("body").transition().style("color","yellow").duration(20000);
 
-d3.select(".lead").transition()
-.style("font-size", "30px").delay(4000).duration(2000);
+
 
 
 
