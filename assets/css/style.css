@@ -1,14 +1,17 @@
 body {
-  background-color: purple;
+  background: url("../images/1.jpg");
   color: white;
   font-family: 'Chicle', cursive;
 }
 
-.jumbotron {
-  background-color: purple;
- 
+h1, p {
+  text-align: center;
 }
 
+.jumbotron {
+  background: url("../images/5.jpeg");
+  
+}
 
 #hide-me {
 

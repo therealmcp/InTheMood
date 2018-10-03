@@ -12,14 +12,37 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Chicle|Notable" rel="stylesheet">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--D3.js Library-->
+    <script src = "assets/javascript/d3.min.js"></script>
   </head>
 
+<body>
+<script>
+  d3.select("body")
+    .transition()
+    .duration(2000);
+    
+d3.select(".lead")
+    .transition()
+    .style("font-size", "30px")
+    .delay(4000)
+    .duration(2000);
+</script>
+    
 
 <div class="container">
     <div class="jumbotron">
       <h1 class="display-3">In the Mood</h1>
       <p class="lead">What are you in the mood for tonight?</p>
+      <script>
+      d3.select(".display-3").transition()
+        .style("font-size", "30px").delay(4000).duration(2000);
+      
+      d3.select(".lead").transition()
+        .style("font-size", "40px").delay(4000).duration(2000)
+        .style("color", "red").delay(4000).duration(2000);
+      
+      </script>
   </div>
   <br>
 
@@ -38,7 +61,7 @@
           </div>
 
           <div class="col-3">
-            My mood:
+            My mood:         
             <select name="dropdown" class="form-control" id="mood">
               <option value="cheap">Cheap</option>
               <option value="established">Established</option>
@@ -83,7 +106,7 @@
         </div>
 
   </div>
-
+  
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -93,9 +116,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
     crossorigin="anonymous"></script>
   <script src="assets\javascript\appGoogleReviews.js"></script>
-  <!-- <script src="assets/javascript/YelpApi.js"></script> -->
-  <!-- <script src="assets/javascript/app.js"></script> -->
+  <!-- <script src="assets/javascript/yelpApi.js"></script> -->
   <!-- <script src="assets/javascript/movies.js"></script> -->
+
 </body>
 
 </html>
