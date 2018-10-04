@@ -46,6 +46,7 @@ $(document).ready(function() {
                 $("#no-match").show();
             } else {
                 $("#no-match").hide();
+                $("#hide-me").show();
                 var chosenAddress = chosenSpot.vicinity.split(' ').join('+');
                 console.log(chosenAddress);
                 link = $("<a>").attr("href",`https://www.google.com/maps/place/${chosenAddress}`).text("Address");
