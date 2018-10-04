@@ -1,6 +1,6 @@
 body {
   background: url("../images/1.jpg");
-  color: white;
+  color: black;
   font-family: 'Chicle', cursive;
 }
 
@@ -10,6 +10,7 @@ h1, p {
 
 .jumbotron {
   background: url("../images/5.jpeg");
+  color: white;
   
 }
 
@@ -18,6 +19,12 @@ h1, p {
 display: none;
 
 }
+
+#hide-me2 {
+
+  display: none;
+  
+  }
 
 
 /* .container {
