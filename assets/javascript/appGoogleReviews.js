@@ -31,8 +31,6 @@ $(document).ready(function() {
     var apiKey = "AIzaSyBolUOu_G0aNYs7L3-byaAek4lJmDE3BV8";
     var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + place + "&type=restaurant&radius=10000&key=" + apiKey;
 
-
-
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -51,11 +49,12 @@ $(document).ready(function() {
                 var chosenAddress = chosenSpot.vicinity.split(' ').join('+');
                 console.log(chosenAddress);
                 link = $("<a>").attr("href",`https://www.google.com/maps/place/${chosenAddress}`).text("Address");
-                // photo = $("<img src=https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + chosenSpot.photos[0].html_attributions.photo_reference + "&key=" + apiKey + ">")
-                photo = chosenSpot.photos[0].html_attributions;
-                $("#link-display", "#image-display").empty();
+                photo = $("<img src=https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + chosenSpot.photos[0].photo_reference + "&key=" + apiKey + ">")
+                $("#link-display", "#image-display", "#review-display", "review-display", "name-display").empty();
                 $("#link-display").append(link);
                 $("#image-display").append(photo);
+                $("#review-display").append(chosenSpot.rating);
+                $("#name-display").append(chosenSpot.name);
             }
         };
 
