@@ -53,6 +53,27 @@ function displayRestaurantInfo() {
 
 
 
+// d3.select("body")
+//     .transition()
+//     .style("color", "red")
+//     .style("background-color","brown")
+//     .duration(2000);
+
+
+// d3.select("container")
+//     .transition()
+//     .style("color", "white")
+//     .style("background-color","brown")
+//     .duration(2000);
+
+
+
+
+// d3.select(".lead")
+//     .transition()
+//     .style("font-size", "30px")
+//     .delay(4000)
+//     .duration(2000);
 
 
 
