@@ -61,7 +61,7 @@ d3.select(".lead")
           </div>
 
           <div class="col-3">
-            My mood:         
+            I'm looking for a restaurant that is...       
             <select name="dropdown" class="form-control" id="mood">
               <option value="cheap">Cheap</option>
               <option value="established">Established</option>
@@ -70,10 +70,21 @@ d3.select(".lead")
           </div>
 
           <div class="col-3">
+            I want a movie that is...         
+            <select name="dropdown" class="form-control" id="genre">
+              <option value="funny">Funny</option>
+              <option value="thrilling">Thrilling</option>
+              <option value="thoughtful">Thoughtful</option>
+            </select>
+          </div>
+
+          <div class="col-3">
             <br>
               <input class="btn btn-light" type="submit" value="Submit" id="find-restaurant">
           </div>
       </div>
+
+      <br>
 
   <div class="row">
     <div class="col-6" id="dinner">
@@ -94,7 +105,7 @@ d3.select(".lead")
 
         <div class="container" id="hide-me">
             <h2>Movie recomendations</h2>
-            <p>Based on your mood we selected a few movies for you</p>
+            <!-- <p>Based on your mood we selected a few movies for you</p> -->
           <table class="table">
             <thead>
               <tr>
