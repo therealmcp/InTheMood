@@ -8,6 +8,8 @@
           
            var movieArray = [];
            var comedy = [];
+           var action = [];
+           var documentary = [];
            var chosenSpot;
 
 
@@ -60,6 +62,8 @@
                 tRow.append(titleTd, yearTd, showtimeTd, theatreTd);
                 tBody.append(tRow);
 
+
+                
                         //    console.log(movie.title);
                         //    console.log(movie.shortDescription);
                         //    console.log(movie.showtimes[0].dateTime);
@@ -75,12 +79,33 @@
 
                         // new code
                         
-                        console.log(movie.genres.indexOf('Comedy'));
+                        /* console.log(movie.genres.indexOf('Comedy')); */
                         if (movie.genres.indexOf('Comedy') != -1) {
                             comedy.push(movie);
                         }
                         console.log(comedy);
 
+                        if (movie.genres.indexOf('Action') != -1) {
+                            action.push(movie);
+                        }
+
+                        console.log(action)
+
+                        if (movie.genres.indexOf('Documentary') != -1) {
+                            documentary.push(movie);
+                        }
+
+                        console.log(documentary)
+
+                        var chosenMood = $("#mood").val();
+
+                        if(chosenMood.toLowerCase() === 'adventurous'){
+                            // return all action movies
+                            if(movie.genres.indexOf('Action')){
+                                // push this movie into our results array to display to the user
+                            }
+                        }
+                        // else if 
 
 
                         // for (i = 0; i < movie.length; i++) {

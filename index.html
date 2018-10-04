@@ -50,17 +50,32 @@
   <div class="container">
 
     <div class="row">
+        <div class="alert alert-danger" role="alert" id="no-match" style="display: none">
+            No match found!
+          </div>
+    </div>
+
+    <div class="row">
           <div class="col-3">
             My location:
             <input class="form-control" type="text" placeholder="ZIP" id="zip-input">
           </div>
 
           <div class="col-3">
-            My mood:         
+            I'm looking for a restaurant that is...       
             <select name="dropdown" class="form-control" id="mood">
               <option value="cheap">Cheap</option>
               <option value="established">Established</option>
               <option value="adventurous">Adventurous</option>
+            </select>
+          </div>
+
+          <div class="col-3">
+            I want a movie that is...         
+            <select name="dropdown" class="form-control" id="genre">
+              <option value="funny">Funny</option>
+              <option value="thrilling">Thrilling</option>
+              <option value="thoughtful">Thoughtful</option>
             </select>
           </div>
 
@@ -70,8 +85,25 @@
           </div>
       </div>
 
+      <br>
+
   <div class="row">
     <div class="col-6" id="dinner">
+
+      <div class="container" id="hide-me">
+        <h2>Dinner Recomendations</h2>
+
+        <div id="name-display"></div>
+
+        <div id="image-display"></div>
+
+        <div id="review-display"></div>
+
+        <div id="link-display"></div>
+
+        <div id="reference-display"></div>
+
+      </div>
 
     </div>
 
@@ -79,7 +111,7 @@
 
         <div class="container" id="hide-me">
             <h2>Movie recomendations</h2>
-            <p>Based on your mood we selected a few movies for you</p>
+            <!-- <p>Based on your mood we selected a few movies for you</p> -->
           <table class="table">
             <thead>
               <tr>
@@ -107,8 +139,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
     crossorigin="anonymous"></script>
   <script src="assets\javascript\appGoogleReviews.js"></script>
-  <script src="assets/javascript/yelpApi.js"></script>
-  <script src="assets/javascript/movies.js"></script>
+  <!-- <script src="assets/javascript/yelpApi.js"></script> -->
+  <!-- <script src="assets/javascript/movies.js"></script> -->
 
 </body>
 
