@@ -23,7 +23,7 @@ $(document).ready(function() {
         position.coords.longitude;
         var location = position.coords.latitude + "," + position.coords.longitude;
         place = location;
-        // console.log(position);
+        //console.log(position);
         }
 
     // When button is clicked
@@ -51,7 +51,11 @@ $(document).ready(function() {
                 console.log(chosenAddress);
                 link = $("<a>").attr("href",`https://www.google.com/maps/place/${chosenAddress}`).text("Address");
                 photo = $("<img src=https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + chosenSpot.photos[0].photo_reference + "&key=" + apiKey + ">")
-                $("#link-display", "#image-display", "#review-display", "review-display", "name-display").empty();
+                $("#link-display").empty();
+                $("#image-display").empty();
+                $("#review-display").empty();
+                $("#review-display").empty();
+                $("#name-display").empty();
                 $("#link-display").append(link);
                 $("#image-display").append(photo);
                 $("#review-display").append(chosenSpot.rating);

@@ -8,6 +8,12 @@ h1, p {
   text-align: center;
 }
 
+.card {
+  background: black;
+  width: auto;
+  height: auto;
+}
+
 .jumbotron {
   background: url("../images/5.jpeg");
   color: white;
