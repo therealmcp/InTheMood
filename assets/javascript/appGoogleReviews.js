@@ -23,7 +23,7 @@ $(document).ready(function() {
         position.coords.longitude;
         var location = position.coords.latitude + "," + position.coords.longitude;
         place = location;
-        // console.log(position);
+        //console.log(position);
         }
 
     // When button is clicked
