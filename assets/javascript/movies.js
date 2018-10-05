@@ -10,7 +10,6 @@
            var comedy = [];
            var action = [];
            var documentary = [];
-           var chosenSpot;
 
 
             $("#find-restaurant").on("click", function(event) {
@@ -29,7 +28,7 @@
               dataType: "jsonp",
              })
            });
-            var movieArray =  [];
+         /*    var movieArray =  []; */
 
            // callback to handle the results
            function dataHandler(data) {
@@ -80,7 +79,7 @@
                         // new code
                         
                         /* console.log(movie.genres.indexOf('Comedy')); */
-                        if (movie.genres.indexOf('Comedy') != -1) {
+                       /*  if (movie.genres.indexOf('Comedy') != -1) {
                             comedy.push(movie);
                         }
                         console.log(comedy);
@@ -95,11 +94,11 @@
                             documentary.push(movie);
                         }
 
-                        console.log(documentary)
+                        console.log(documentary) */
 
-                        var chosenMood = $("#mood").val();
+                        var chosenGenre = $("#genre").val();
 
-                        if(chosenMood.toLowerCase() === 'adventurous'){
+                        if(chosenGenre.toLowerCase() === 'thrilling'){
                             // return all action movies
                             if(movie.genres.indexOf('Action')){
                                 // push this movie into our results array to display to the user
