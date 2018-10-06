@@ -52,7 +52,7 @@ $(document).ready(function() {
                 var chosenMood = $("#mood").val();
                 console.log("you chose ", chosenMood);
                 chosenSpot = array[Math.floor(Math.random()*array.length)]
-                $("#dinner").prepend(chosenSpot.icon);
+                // $("#dinner").prepend(chosenSpot.icon);
                 };
 
             selected(cheap);
