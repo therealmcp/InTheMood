@@ -1,15 +1,52 @@
 body {
-  background-color: purple;
-  color: white;
-}
-
-.display-3 {
+  background: url("../images/1.jpg");
+  color: black;
   font-family: 'Chicle', cursive;
 }
 
-.container {
-  position: absolute;
+h1, p {
+  text-align: center;
+}
+
+.card {
+  background-color: black;
+  width: auto;
+  height: auto;
+}
+
+.jumbotron {
+  background: url("../images/5.jpeg");
+  color: white;
+  align-self: center;
+}
+
+#hide-me {
+
+  display: none;
+
+}
+
+#hide-me2 {
+
+  display: none;
+  
+}
+
+#dinner {
+
+}
+
+#name-display {
+  size: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* .container {
+  position: relative;
   top: 25%;
   bottom: 75%;
-  left: 25%;
-}
+  left: 10%;
+} */
