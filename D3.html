@@ -7,14 +7,14 @@
     </head>
 
 
-<canvas width="1200" height="500"></canvas>
+<canvas width="1200" height="600"></canvas>
 <script src="https://unpkg.com/d3-timer"></script>
 
     <body>
 
         <style>
             body {
-                background-color: papayawhip;
+                background-color: papayawhip 
             }
         </style>
         <script>
@@ -52,7 +52,7 @@
                 context2.save();
                 context2.clearRect(0, 0, width, height);
                 context2.lineWidth = i & 1 ? i * 5 + 3 : i * 5;
-                context2.strokeStyle = i & 1 ? "gray" : "black";
+                context2.strokeStyle = i & 1 ? "wheat" : "tomato";
                 context2.strokeText(text, width / 2, height / 2 + 100);
                 context2.restore();
                 context2.drawImage(canvas, 0, 0);

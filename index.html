@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>In the Mood</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Chicle|Notable" rel="stylesheet">
-    <!--D3.js Library-->
-    <script src = "assets/javascript/d3.min.js"></script>
-  </head>
+<head>
+  <title>In the Mood</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Chicle|Notable" rel="stylesheet">
+  <!--D3.js Library-->
+  <script src="assets/javascript/d3.min.js"></script>
+</head>
 
 <body>
-<script>
+  <script>
 
-  d3.select("body")
+    d3.select("body")
     .transition()
     .duration(2000);
     
@@ -29,14 +31,14 @@
     .delay(4000)
     .duration(2000);
 </script>
-    
 
-<div class="container">
+
+  <div class="container">
     <div class="jumbotron">
       <h1 class="display-3">In the Mood</h1>
       <p class="lead">What are you in the mood for tonight?</p>
       <script>
-      d3.select(".display-3").transition()
+        d3.select(".display-3").transition()
         .style("font-size", "30px").delay(4000).duration(2000);
       
       d3.select(".lead").transition()
@@ -44,110 +46,113 @@
         .style("color", "red").delay(4000).duration(2000);
       
       </script>
-  </div>
-  <br>
-
-  <div class="container">
-
-    <div class="row">
-        <div class="alert alert-danger" role="alert" id="no-match" style="display: none">
-            No match found!
-          </div>
     </div>
+    <br>
 
-    <div class="row">
-          <div class="col-3">
-            My location:
-            <input class="form-control" type="text" placeholder="ZIP" id="zip-input">
-          </div>
+    <div class="container">
 
-          <div class="col-3">
-            I'm looking for a restaurant that is...       
-            <select name="dropdown" class="form-control" id="mood">
-              <option value="cheap">Cheap</option>
-              <option value="established">Established</option>
-              <option value="adventurous">Adventurous</option>
-            </select>
-          </div>
+      <div class="row">
+        <div class="alert alert-danger" role="alert" id="no-match" style="display: none">
+          No match found!
+        </div>
+      </div>
 
-          <div class="col-3">
-            I want a movie that is...         
-            <select name="dropdown" class="form-control" id="genre">
-              <option value="funny">Funny</option>
-              <option value="thrilling">Thrilling</option>
-              <option value="thoughtful">Thoughtful</option>
-            </select>
-          </div>
+      <div class="row">
+        <div class="col-3">
+          My location:
+          <input class="form-control" type="text" placeholder="ZIP" id="zip-input">
+        </div>
 
-          <div class="col-3">
-            <br>
-              <input class="btn btn-light" type="submit" value="Submit" id="find-restaurant">
-          </div>
+        <div class="col-3">
+          I'm looking for a restaurant that is...
+          <select name="dropdown" class="form-control" id="mood">
+            <option value="cheap">Cheap</option>
+            <option value="established">Established</option>
+            <option value="adventurous">Adventurous</option>
+          </select>
+        </div>
+
+        <div class="col-3">
+          I want a movie that is...
+          <select name="dropdown" class="form-control" id="genre">
+            <option value="funny">Funny</option>
+            <option value="thrilling">Thrilling</option>
+            <option value="thoughtful">Thoughtful</option>
+          </select>
+        </div>
+
+        <div class="col-3">
+          <br>
+          <input class="btn btn-light" type="submit" value="Submit" id="find-restaurant">
+        </div>
       </div>
 
       <br>
 
-  <div class="row">
-    <div class="col-6" id="dinner">
+      <div class="row">
+        <div class="col-6" id="dinner">
 
-      <div class="container" id="hide-me">
-        <h2>Dinner Recomendations</h2>
+          <div class="container" id="hide-me">
+            <h2>Dinner Recomendations</h2>
 
-        <div id="review-display"></div>
+            <div id="review-display"></div>
 
-        <div></div>
+            <div></div>
 
-        <div id="reference-display"></div>
+            <div id="reference-display"></div>
+            
+            <div class="card" style="width: 400px;">
+              <img class="card-img-top" alt="Restaurant Image" id="image-display">
+              <div class="card-body">
+                <h5 class="card-title" id="name-display"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" id="link-display">Address</a>
+              </div>
+            </div>
 
-        <div class="card" style="width: 400px;">
-          <img class="card-img-top" alt="Restaurant Image" id="image-display">
-          <div class="card-body">
-            <h5 class="card-title" id="name-display"></h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary" id="link-display">Address</a>
+          </div>
+
+        </div>
+
+        <div class="col-6" id="movie">
+
+        <div id="yelp">
+          
+        </div>
+
+          <div class="container" id="hide-me2">
+            <h2>Movie recomendations</h2>
+            <!-- <p>Based on your mood we selected a few movies for you</p> -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Movie</th>
+                  <th scope="col">Short description</th>
+                  <th scope="col">Show times</th>
+                  <th scope="col">Theatres</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
           </div>
         </div>
 
       </div>
 
-    </div>
 
-    <div class="col-6" id="movie">
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+      <script src="assets\javascript\appGoogleReviews.js"></script>
+      <script src="assets/javascript/yelpApi.js"></script>
+      <script src="assets/javascript/app.js"></script>  
 
-        <div class="container" id="hide-me2">
-            <h2>Movie recomendations</h2>
-            <!-- <p>Based on your mood we selected a few movies for you</p> -->
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Movie</th>
-                <th scope="col">Short description</th>
-                <th scope="col">Show times</th>
-                <th scope="col">Theatres</th>
-              </tr>
-            </thead>
-            <tbody>
-      
-            </tbody>
-          </table>
-          </div>
-        </div>
-
-  </div>
-  
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <script src="assets\javascript\appGoogleReviews.js"></script>
-  <script src="assets/javascript/yelpApi.js"></script> 
-  <!-- <script src="assets/javascript/movies.js"></script>  -->
-  
 </body>
 
 </html>
-
