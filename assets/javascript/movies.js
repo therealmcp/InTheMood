@@ -1,5 +1,5 @@
 // construct the url with parameter values
-var apikey = "wcynn7m8cmtd5c24zfer2f77";
+var apikey = "png3faunycpgqmqspytjkzxe";
 var baseUrl = "http://data.tmsapi.com/v1.1";
 var showtimesUrl = baseUrl + '/movies/showings';
 var zipCode = {};

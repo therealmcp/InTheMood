@@ -21,15 +21,11 @@ h1, p {
 }
 
 #hide-me {
-
   display: none;
-
 }
 
 #hide-me2 {
-
   display: none;
-  
 }
 
 #dinner {
@@ -37,11 +33,15 @@ h1, p {
 }
 
 #name-display {
-  size: 25px;
+  font-size: 25px;
 }
 
 .center {
   text-align: center;
+}
+
+#no-match {
+  font-size: 25px;
 }
 
 /* .container {
