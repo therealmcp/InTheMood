@@ -23,7 +23,6 @@ $(document).ready(function() {
         position.coords.longitude;
         var location = position.coords.latitude + "," + position.coords.longitude;
         place = location;
-        //console.log(position);
         }
 
     // When button is clicked
@@ -66,8 +65,6 @@ $(document).ready(function() {
         };
 
         var chosenMood = $("#mood").val();
-        console.log("you chose ", chosenMood);
-
         if (chosenMood == "cheap") {
             results = googRestaurants.filter(function(restaurant) {
                 return restaurant.price_level < 3;

@@ -30,7 +30,12 @@ display: none;
 
   display: none;
   
-  }
+}
+
+#dinner {
+  float: none;
+  align-self: center;
+}
 
 
 /* .container {
