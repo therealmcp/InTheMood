@@ -17,7 +17,7 @@ h1, p {
 .jumbotron {
   background: url("../images/5.jpeg");
   color: white;
-  
+  align-self: center;
 }
 
 #hide-me {
@@ -43,7 +43,6 @@ h1, p {
 .center {
   text-align: center;
 }
-
 
 /* .container {
   position: relative;

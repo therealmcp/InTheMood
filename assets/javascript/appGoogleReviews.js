@@ -45,6 +45,11 @@ $(document).ready(function() {
             chosenSpot = array[Math.floor(Math.random()*array.length)]
             if (chosenSpot == null) {
                 $("#no-match").show();
+                $("#link-display").empty();
+                $("#image-display").empty();
+                $("#review-display").empty();
+                $("#review-display").empty();
+                $("#name-display").empty();
             } else {
                 $("#no-match").hide();
                 $("#hide-me").show();
